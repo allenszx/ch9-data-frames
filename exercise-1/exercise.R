@@ -24,7 +24,7 @@ games$won <- c(games$difference > 0)
 
 
 # Create a vector of the opponent names corresponding to the games played
-games$opp_name <- c("CHARGERS", "VIKINGS", "CHIEFS", "RAIDERS")
+opp_name <- c("CHARGERS", "VIKINGS", "CHIEFS", "RAIDERS")
 
 # Assign your dataframe rownames of their opponents
 
