@@ -16,19 +16,15 @@ games <- data.frame(points_scored, points_allowed)
 # a vector) to a list!
 
 diff <- points_scored - points_allowed
-games[[3]] <- diff
+games$difference <- diff
 
 
 # Create a new column "won" which is TRUE if the Seahawks won the game
-won <- list(FALSE, FALSE, FALSE, FALSE)
-for (i in 1:length(diff)) {
-  if (diff[i] > 0) {
-    won[[i]] <- TRUE
-  }
-}
+games$won <- c(games$difference > 0)
+
 
 # Create a vector of the opponent names corresponding to the games played
-opp_name <- c("CHARGERS", "VIKINGS", "CHIEFS", "RAIDERS")
+games$opp_name <- c("CHARGERS", "VIKINGS", "CHIEFS", "RAIDERS")
 
 # Assign your dataframe rownames of their opponents
 
@@ -37,4 +33,5 @@ games$rownames <- opp_name
  
 # View your data frame to see how it has changed!
 View(games)
+
 
