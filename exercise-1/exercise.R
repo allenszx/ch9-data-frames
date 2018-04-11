@@ -15,8 +15,8 @@ games <- data.frame(points_scored, points_allowed)
 # Hint: recall the syntax for assigning new elements (which in this case will be
 # a vector) to a list!
 
-diff <- points_scored - points_allowed
-games$difference <- diff
+
+games$difference <- points_scored - points_allowed
 
 
 # Create a new column "won" which is TRUE if the Seahawks won the game
